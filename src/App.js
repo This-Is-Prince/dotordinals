@@ -11,7 +11,7 @@ function App() {
     return (
         <div className="App">
             <div className="tab">
-                <h1 class="logo-title">Dot Ordinals</h1>
+                <h1 className="logo-title">Dot Ordinals</h1>
                 <button
                     className={`tablinks ${activeTab === 'upload' ? 'active' : ''}`}
                     onClick={() => setActiveTab('upload')}

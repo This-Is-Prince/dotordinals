@@ -58,7 +58,7 @@ const UploadOrdinal = () => {
         tx.signAndSend(selectedAddress, { signer }, ({ status }) => {
             if (status.isInBlock) {
                 console.log(`Completed at block hash #${status.asInBlock.toString()}`);
-                alert('Ordinal inscribed!');
+                alert('Ordinal inscribed! please check subscan for extrinsic id');
             }
         });
     };
