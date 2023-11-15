@@ -10,6 +10,10 @@ function App() {
 
     return (
         <div className="App">
+            <a href="https://github.com/niklabh/dotordinals" className="github-corner" aria-label="View source on GitHub">
+              <img src='https://github.blog/wp-content/uploads/2008/12/forkme_right_white_ffffff.png?resize=149%2C149' alt='Fork me on GitHub' />
+            </a>
+
             <div className="tab">
                 <h1 className="logo-title">Dot Ordinals</h1>
                 <button
