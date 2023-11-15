@@ -1,5 +1,7 @@
 # Dot Ordinals
 
+Inspired from @BillLaboon command line ordinals https://twitter.com/BillLaboon/status/1724779175121490132 this project is aimed to create a dapp around it.
+
 Dot Ordinals is a web application designed to interact with the Polkadot blockchain. It allows users to upload data as ordinals and view them using a transaction ID. The application showcases how to utilize the Polkadot.js API to work with blockchain transactions and encodings.
 
 ## Features
@@ -44,23 +46,20 @@ npm run build
 
 This command will create a `build` directory with the production-ready files.
 
-## Contributing
-
-Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on how to submit pull requests to us.
-
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE,md).
 
 ## Acknowledgments
 
 - [Polkadot.js API](https://polkadot.js.org/api/) for providing the tools to interact with the Polkadot blockchain.
 - All contributors who spend their time to improve this project.
+- [@BillLaboon](https://twitter.com/BillLaboon) for the inspiration.
 
 ## Contact
 
-For any queries or further discussions, you can reach out at `email@example.com`.
+For any queries or further discussions, you can reach out at `https://twitter.com/niklabh`.
 
----
+## Contributing
 
-**Note**: This README is a template and should be customized to accurately reflect your project's setup, usage, contribution guidelines, licensing, and contact information.
+Contributions are welcome! Please feel free to submit a Pull Request.
