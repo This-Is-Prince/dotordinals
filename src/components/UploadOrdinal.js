@@ -56,9 +56,9 @@ const UploadOrdinal = () => {
         const tx = api.tx.system.remarkWithEvent(JSON.stringify(payload));
 
         tx.signAndSend(selectedAddress, { signer }, ({ status }) => {
-          console.log(status);
             if (status.isInBlock) {
                 console.log(`Completed at block hash #${status.asInBlock.toString()}`);
+                alert('Ordinal inscribed!');
             }
         });
     };
