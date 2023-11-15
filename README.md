@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# Dot Ordinals
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Dot Ordinals is a web application designed to interact with the Polkadot blockchain. It allows users to upload data as ordinals and view them using a transaction ID. The application showcases how to utilize the Polkadot.js API to work with blockchain transactions and encodings.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Upload Ordinals**: Users can upload text and images as ordinals to the Polkadot blockchain.
+- **View Ordinals**: Users can retrieve and view uploaded ordinals using the associated transaction ID.
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before you begin, ensure you have [Node.js](https://nodejs.org/) installed on your system.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone the repository:
+   ```
+   git clone https://github.com/your-username/dot-ordinals.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd dot-ordinals
+   ```
+3. Install the dependencies:
+   ```
+   npm install
+   ```
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To run the application locally:
 
-### `npm run build`
+```
+npm start
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This will start the development server and open the application in your default web browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Building the Project
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To build the application for production:
 
-### `npm run eject`
+```
+npm run build
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+This command will create a `build` directory with the production-ready files.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Contributions are welcome! Please read our [Contributing Guide](CONTRIBUTING.md) for details on how to submit pull requests to us.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## License
 
-## Learn More
+This project is licensed under the [MIT License](LICENSE).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Acknowledgments
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- [Polkadot.js API](https://polkadot.js.org/api/) for providing the tools to interact with the Polkadot blockchain.
+- All contributors who spend their time to improve this project.
 
-### Code Splitting
+## Contact
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+For any queries or further discussions, you can reach out at `email@example.com`.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Note**: This README is a template and should be customized to accurately reflect your project's setup, usage, contribution guidelines, licensing, and contact information.
