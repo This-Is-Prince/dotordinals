@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { hexToString } from '@polkadot/util';
 
+const Buffer = require('buffer/').Buffer
+
 const ViewOrdinal = () => {
     const [txnId, setTxnId] = useState('');
     const [fileData, setFileData] = useState(null);

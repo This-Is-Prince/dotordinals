@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import { ApiPromise, WsProvider } from '@polkadot/api';
 import { web3Accounts, web3Enable, web3FromSource } from '@polkadot/extension-dapp';
 
+const Buffer = require('buffer/').Buffer
 
 const APPNAME = 'DOT ordinals';
 
