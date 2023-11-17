@@ -52,7 +52,7 @@ const UploadOrdinal = () => {
           name: file.name,
           size: file.size,
           type: file.type,
-          data: Buffer.from(buffer).toString('hex'),
+          data: Buffer.from(buffer).toString('hex')
         };
 
         const tx = api.tx.system.remarkWithEvent(JSON.stringify(payload));
