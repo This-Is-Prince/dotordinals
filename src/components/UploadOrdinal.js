@@ -48,6 +48,7 @@ const UploadOrdinal = () => {
         const buffer = await file.arrayBuffer();
 
         const payload = {
+          source: 'dotordinals',
           name: file.name,
           size: file.size,
           type: file.type,
