@@ -48,11 +48,11 @@ const UploadOrdinal = () => {
         const buffer = await file.arrayBuffer();
 
         const payload = {
+          source: 'dotordinals',
           name: file.name,
           size: file.size,
           type: file.type,
           data: Buffer.from(buffer).toString('hex'),
-          source: 'dotordinals'
         };
 
         const tx = api.tx.system.remarkWithEvent(JSON.stringify(payload));
