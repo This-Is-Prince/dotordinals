@@ -1,12 +1,13 @@
 // src/components/ViewOrdinal.js
 
 import React, { useState } from 'react';
-import { ApiPromise, WsProvider } from '@polkadot/api';
 import { hexToString } from '@polkadot/util';
+import { useApiContext } from '../context/ApiContext';
 
 const Buffer = require('buffer/').Buffer
 
 const ViewOrdinal = () => {
+    const { api } = useApiContext();
     const [txnId, setTxnId] = useState('');
     const [fileData, setFileData] = useState(null);
 
@@ -16,9 +17,6 @@ const ViewOrdinal = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
-        const provider = new WsProvider('wss://rpc.polkadot.io');
-        const api = await ApiPromise.create({ provider });
 
         try {
             const blockHash = await api.rpc.chain.getBlockHash(txnId.split('-')[0]);

@@ -4,8 +4,10 @@ import React, { useState } from 'react';
 import UploadOrdinal from './components/UploadOrdinal';
 import ViewOrdinal from './components/ViewOrdinal';
 import './App.css';
+import { networks, useApiContext } from './context/ApiContext';
 
 function App() {
+    const { network, setNetwork } = useApiContext();
     const [activeTab, setActiveTab] = useState('upload');
 
     return (
@@ -16,18 +18,36 @@ function App() {
 
             <div className="tab">
                 <h1 className="logo-title">Dot Ordinals</h1>
-                <button
-                    className={`tablinks ${activeTab === 'upload' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('upload')}
-                >
-                    Upload Ordinal
-                </button>
-                <button
-                    className={`tablinks ${activeTab === 'view' ? 'active' : ''}`}
-                    onClick={() => setActiveTab('view')}
-                >
-                    View Ordinal
-                </button>
+                <section>
+                    <article>
+                        <button
+                            className={`tablinks ${activeTab === 'upload' ? 'active' : ''}`}
+                            onClick={() => setActiveTab('upload')}
+                        >
+                            Upload Ordinal
+                        </button>
+                        <button
+                            className={`tablinks ${activeTab === 'view' ? 'active' : ''}`}
+                            onClick={() => setActiveTab('view')}
+                        >
+                            View Ordinal
+                        </button>
+                    </article>
+                    <article className='network-dropdown'>
+                        <select
+                            onChange={(e) => {
+                                setNetwork(e.target.value);
+                            }}
+                            value={network}
+                        >
+                            {Object.keys(networks).map((network, idx) => (
+                                <option key={idx} value={network}>
+                                    {network}
+                                </option>
+                            ))}
+                        </select>
+                    </article>
+                </section>
             </div>
 
             {activeTab === 'upload' && <UploadOrdinal />}
