@@ -201,3 +201,55 @@ button {
 .upload-ordinal button:hover {
   background-color: #45a049;
 }
+.network-dropdown select {
+  padding: 10px;
+  margin: 0px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  height: 100%;
+  display: flex;
+  font-size: 16px;
+  text-transform: capitalize;
+}
+.tab section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 100px;
+}
+.modal-wrapper {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+}
+.modal {
+  flex-direction: column;
+  gap: 10px;
+  min-width: 500px;
+  border: 1px solid grey;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+}
+.modal-open {
+  display: flex;
+}
+.modal-wrapper p{
+  margin: 0;
+}
+.block-hash {
+  font-size: 18px;
+  font-weight: 500;
+}
+.modal-wrapper button {
+  font-size: 16px;
+  font-weight: 500;
+}
