@@ -7,6 +7,7 @@ import CTA from './components/CTA';
 
 import './App.css';
 import { networks, useApiContext } from './context/ApiContext';
+import logo from './logo.png';
 
 function App() {
     const { network, setNetwork } = useApiContext();
@@ -19,7 +20,7 @@ function App() {
             </a>
 
             <div className="tab">
-                <h1 className="logo-title">Dot Ordinals</h1>
+                <h1 className="logo-title"><img className='logo-img' height="30" src={logo} alt="logo" /> Dot Ordinals</h1>
                 <section>
                     <article>
                         <button

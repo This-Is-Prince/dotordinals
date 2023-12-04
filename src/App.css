@@ -39,14 +39,18 @@ button {
   font-size: 2em; /* Adjust the size as needed */
   color: #333; /* Dark text for better readability */
   font-weight: bold; /* Makes the title more prominent */
-  text-align: center; /* Centers the title in the tab */
+  text-align: left; /* Centers the title in the tab */
   margin: 0; /* Removes default margin */
-  padding: 20px 0; /* Adds some space above and below the title */
+  padding: 20px 10px; /* Adds some space above and below the title */
   background: #e5e5e5; /* Light background for the tab */
   border-radius: 8px; /* Optional: rounds the corners of the tab */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow for depth */
   text-transform: uppercase; /* Optional: transforms text to uppercase for a stylistic choice */
   letter-spacing: 1px; /* Increases spacing between letters for a more refined look */
+}
+
+.logo-img {
+  vertical-align: middle;
 }
 
 /* You might want to add some media queries for responsiveness */
