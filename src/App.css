@@ -253,3 +253,37 @@ button {
   font-size: 16px;
   font-weight: 500;
 }
+
+/* CTA Styles in CSS */
+
+.cta-container {
+  text-align: center;
+  background-color: #0055a5; /* Dark blue background */
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cta-message {
+  font-size: 1.2em;
+  margin: 0 0 20px 0;
+}
+
+.cta-button {
+  background-color: #ffcc00; /* Bright yellow button */
+  color: #0055a5; /* Text color */
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cta-button:hover {
+  background-color: #e6b800;
+  transform: scale(1.05);
+}

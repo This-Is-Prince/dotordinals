@@ -3,6 +3,8 @@
 import React, { useState } from 'react';
 import UploadOrdinal from './components/UploadOrdinal';
 import ViewOrdinal from './components/ViewOrdinal';
+import CTA from './components/CTA';
+
 import './App.css';
 import { networks, useApiContext } from './context/ApiContext';
 
@@ -52,6 +54,8 @@ function App() {
 
             {activeTab === 'upload' && <UploadOrdinal />}
             {activeTab === 'view' && <ViewOrdinal />}
+            <CTA />
+
         </div>
     );
 }
