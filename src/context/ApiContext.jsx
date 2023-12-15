@@ -12,6 +12,9 @@ export const networks = {
     'kusama': {
         rpcEndpoint: 'wss://kusama-rpc.polkadot.io'
     },
+    'piccaso': {
+        rpcEndpoint: 'wss://rpc.composablenodes.tech'
+    },
 };
 
 export const ApiContext = React.createContext({
