@@ -4,11 +4,11 @@ import { useApiContext } from '../context/ApiContext';
 
 const APPNAME = 'DOT ordinals';
 
-const CreateDRC = () => {
+const TransferDRC = () => {
     const { api } = useApiContext();
     const [tick, setTick] = useState('');
-    const [totalSupply, setTotalSupply] = useState(0);
-    const [limit, setLimit] = useState(0);
+    const [amount, setAmount] = useState(0);
+    const [to, setTo] = useState('');
     const [addresses, setAddresses] = useState([]);
     const [selectedAddress, setSelectedAddress] = useState('');
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,12 +32,12 @@ const CreateDRC = () => {
         setTick(e.target.value);
     };
 
-    const handleTotalSupplyChange = (e) => {
-        setTotalSupply(e.target.value);
+    const handleAmountChange = (e) => {
+      setAmount(parseInt(e.target.value));
     };
 
-    const handleLimitChange = (e) => {
-        setLimit(e.target.value);
+    const handleToChange = (e) => {
+        setTo(e.target.value);
     };
 
     const handleSubmit = async (e) => {
@@ -46,10 +46,10 @@ const CreateDRC = () => {
 
         console.log('selectedAddress', selectedAddress);
         console.log('tick', tick);
-        console.log('totalSupply', totalSupply);
-        console.log('limit', limit);
+        console.log('amount', amount);
+        console.log('to', to);
 
-        if (!selectedAddress || !tick || !totalSupply || !limit) {
+        if (!selectedAddress || !tick || !amount || !to) {
             return alert('Please fill all the fields');
         }
 
@@ -58,11 +58,11 @@ const CreateDRC = () => {
             const signer = injector.signer;
 
             const payload = {
-                "p":"drc-20",
-                "op":"deploy",
+                "p":"asc-20",
+                "op":"transfer",
                 "tick":tick,
-                "max":totalSupply,
-                "lim":limit
+                "to": to,
+                "amt":amount
             };
 
             const tx = api.tx.system.remarkWithEvent(JSON.stringify(payload));
@@ -97,7 +97,7 @@ const CreateDRC = () => {
                 </button>
             </div>
         </div>
-          <h2>Create DRC 20 token</h2>
+          <h2>Transfer DRC 20 token</h2>
           <form onSubmit={handleSubmit}>
               <label htmlFor="tick">Address</label>
               <select name="address" onChange={handleAddressChange}>
@@ -110,14 +110,14 @@ const CreateDRC = () => {
               </select>
               <label htmlFor="tick">Tick</label>
               <input name="tick" type="text" onChange={handleTickChange} />
-              <label htmlFor="totalSupply">Total Supply</label>
-              <input name="totalSupply" type="text" onChange={handleTotalSupplyChange} />
-              <label htmlFor="limit">Limit</label>
-              <input name="limit" type="text" onChange={handleLimitChange} />
-              <button type="submit">Create Token</button>
+              <label htmlFor="to">To Address</label>
+              <input name="to" type="text" onChange={handleToChange} />
+              <label htmlFor="amount">Amount</label>
+              <input name="amount" type="text" onChange={handleAmountChange} />
+              <button type="submit">Transfer Token</button>
           </form>
       </div>
     );
 };
 
-export default CreateDRC;
+export default TransferDRC;

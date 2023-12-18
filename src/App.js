@@ -4,7 +4,8 @@ import React, { useState } from 'react';
 import UploadOrdinal from './components/UploadOrdinal';
 import ViewOrdinal from './components/ViewOrdinal';
 import CreateDRC from './components/CreateDRC';
-import CTA from './components/CTA';
+import MintDRC from './components/MintDRC';
+import TransferDRC from './components/TransferDRC';
 
 import './App.css';
 import { networks, useApiContext } from './context/ApiContext';
@@ -28,7 +29,19 @@ function App() {
                             className={`tablinks ${activeTab === 'createDRC' ? 'active' : ''}`}
                             onClick={() => setActiveTab('createDRC')}
                         >
-                            Create DRC
+                            Create Token
+                        </button>
+                        <button
+                            className={`tablinks ${activeTab === 'mintDRC' ? 'active' : ''}`}
+                            onClick={() => setActiveTab('mintDRC')}
+                        >
+                            Mint Token
+                        </button>
+                        <button
+                            className={`tablinks ${activeTab === 'transferDRC' ? 'active' : ''}`}
+                            onClick={() => setActiveTab('transferDRC')}
+                        >
+                            Transfer Token
                         </button>
                         <button
                             className={`tablinks ${activeTab === 'upload' ? 'active' : ''}`}
@@ -60,10 +73,12 @@ function App() {
                 </section>
             </div>
 
+
             {activeTab === 'createDRC' && <CreateDRC />}
+            {activeTab === 'mintDRC' && <MintDRC />}
+            {activeTab === 'transferDRC' && <TransferDRC />}
             {activeTab === 'upload' && <UploadOrdinal />}
             {activeTab === 'view' && <ViewOrdinal />}
-            <CTA />
 
         </div>
     );
