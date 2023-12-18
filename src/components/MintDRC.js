@@ -52,7 +52,7 @@ const MintDRC = () => {
             const signer = injector.signer;
 
             const payload = {
-              "p":"asc-20",
+              "p":"drc-20",
               "op":"mint",
               "tick":tick,
               "amt":amount
