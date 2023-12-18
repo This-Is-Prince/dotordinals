@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import UploadOrdinal from './components/UploadOrdinal';
 import ViewOrdinal from './components/ViewOrdinal';
+import CreateDRC from './components/CreateDRC';
 import CTA from './components/CTA';
 
 import './App.css';
@@ -11,7 +12,7 @@ import logo from './logo.png';
 
 function App() {
     const { network, setNetwork } = useApiContext();
-    const [activeTab, setActiveTab] = useState('upload');
+    const [activeTab, setActiveTab] = useState('createDRC');
 
     return (
         <div className="App">
@@ -23,6 +24,12 @@ function App() {
                 <h1 className="logo-title"><img className='logo-img' height="30" src={logo} alt="logo" /> Dot Ordinals</h1>
                 <section>
                     <article>
+                        <button
+                            className={`tablinks ${activeTab === 'createDRC' ? 'active' : ''}`}
+                            onClick={() => setActiveTab('createDRC')}
+                        >
+                            Create DRC
+                        </button>
                         <button
                             className={`tablinks ${activeTab === 'upload' ? 'active' : ''}`}
                             onClick={() => setActiveTab('upload')}
@@ -53,6 +60,7 @@ function App() {
                 </section>
             </div>
 
+            {activeTab === 'createDRC' && <CreateDRC />}
             {activeTab === 'upload' && <UploadOrdinal />}
             {activeTab === 'view' && <ViewOrdinal />}
             <CTA />
